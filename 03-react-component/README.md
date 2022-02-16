@@ -3,6 +3,7 @@
 Latihan di bawah ini saling terhubung
 
 ---
+
 ## v1.0 - Component
 
 Ambil html dari template
@@ -13,6 +14,7 @@ Ambil html dari template
 - Jalankan aplikasi react, dan pastikan sudah berjalan
 
 ---
+
 ## v2.0 - Component
 
 Refactor template menjadi react compoent
@@ -30,19 +32,19 @@ Refactor template menjadi react compoent
 
 Buat data array untuk Hobbies dan Skills
 
-- Di dalam `Hobbies.js`, buat data array of object yang bernama `hobbies` berisikan nama hobi dan gambarnya. contoh
+- Di dalam `Hobbies.js`, buat state array of object yang bernama `hobbies` berisikan nama hobi dan gambarnya. contoh
   ```js
-    let hobbies = [
-      {name: "nonton", img: "alamat gambar"}, 
+    [
+      {name: "nonton", img: "alamat gambar"},
       <!-- dan seterusnya -->
     ]
   ```
   - Hapus semua element yang memiliki className `hobby-item`, dan sisakan 1 element saja.
   - `map` data `hobbies` lalu tampilkan gambar dan nama hobby pada sebuah element yg memiliki className `hobby-item`
-- Di dalam `Skills.js`, buat data array of object yang bernama `skills` berisikan nama hobi dan gambarnya, contoh
+- Di dalam `Skills.js`, buat state array of object yang bernama `skills` berisikan nama skill dan gambarnya, contoh
   ```js
-    let skills = [
-      {name: "ngoding", img: "alamat gambar"}, 
+    [
+      {name: "ngoding", img: "alamat gambar"},
       <!-- dan seterusnya -->
     ]
   ```
@@ -50,6 +52,7 @@ Buat data array untuk Hobbies dan Skills
   - `map` data `skills` lalu tampilkan gambar dan nama skill pada sebuah element yg memiliki className `skill-item`
 
 ---
+
 ## v4.0 - Props
 
 - Buat komponen baru `HobbyItem.js` yg dapat menerima props `hobby`
@@ -59,8 +62,8 @@ Buat data array untuk Hobbies dan Skills
 - Pindahkan element yang memiliki id `skill-item` ke dalam komponen `SkillItem.js`
 - Panggil `<SkillItem />` di dalam map, lalu kirimkan props `skill` kedalamnya
 
-
 ---
+
 ## v5.0 - onClick
 
 - Di dalam `HobbyItem.js`, beri `onClick` pada elemen yang memiliki className `hobby-item`. Ketika di klik, tampilkan `alert()` yg berisi nama hobby
