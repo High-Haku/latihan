@@ -24,20 +24,22 @@ Membuat form Login
 ---
 ## v2.0 - Refactor Login
 
-Pada v1.0, **_bagaimana jika terdapat banyak text input? berarti kita harus membuat function untuk masing-masing text input dong??_**
+Pada **v1.0**, **_bagaimana jika terdapat banyak text input? berarti kita harus membuat function untuk masing-masing text input dong??_**
 
 kita akan merapikan supaya lebih efisien
 
-- Salin komponen `Login` dan beri nama `Login2`
-- pada `Login2`:
-  - Hapus state `username` dan `password`
-  - Hapus func `handleChangeUsername` dan `handleChangePassword`
-  - Buat state baru bernama `user` (_objek_) yg memiliki properti **username** dan **password**
-  - Pada `text input` username dan password, beri atribut:
-    - `onChange`, menjalankan function `handleChangeUser`
+- Buat komponen baru bernama `Login2`
+- `Login2` Menampilkan:
+  - `text input` username
+  - `text input` password
+  - `button` login
+- `Login2` memiliki state:
+  - `user` (_objek_) yg memiliki properti **username** dan **password**
+- Pada `text input` **username** dan **password**, beri atribut:
+    - `onChange`, menjalankan function `handleChangeInput`
     - `name`, sesuai dengan nama properti pada state `user`
-    - `value`, ambil properti dari state `user`
-  - Pada `handleChangeUser`, ubah state `user` dengan memberikan object baru
+    - `value`, bernilai properti dari state `user`
+  - Pada `handleChangeInput`, ubah state `user` dengan memberikan object baru
     ```js
     {
       // ambil isi object yg sekarang
@@ -47,6 +49,6 @@ kita akan merapikan supaya lebih efisien
       [event.target.name]: event.target.value
     }
     ```
-  - pada `button` login, tampilkan data user di console
+- Pada `button` login, tampilkan data user di console
 
 
